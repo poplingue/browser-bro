@@ -2,10 +2,7 @@
 <template>
     <div>
         <select @change="updateCustom" name="custom" id="">
-            <option value="webpack">webpack</option>
-            <option value="js">js</option>
-            <option value="css">css</option>
-            <option value="python">python</option>
+          <option v-for="custom in customs" :value="custom.value">{{ custom.title }} </option>
         </select>
       <div>{{custom}}</div>
     </div>
