@@ -7,6 +7,13 @@
     "sourceMap": true,
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
-    "allowJs": true
+    "allowJs": true,
+    "strict": true,
+    "noImplicitReturns": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "strictNullChecks": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false
   }
 }

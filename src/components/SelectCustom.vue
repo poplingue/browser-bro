@@ -12,14 +12,29 @@
 </template>
 
 <script lang="ts">
-    import {Vue, Component, Prop, Emit} from "vue-property-decorator";
+    import {Vue, Component, Prop, Emit, Watch} from "vue-property-decorator";
+    import {custom}                     from "./Custom";
 
     @Component
     export default class SelectCustom extends Vue{
 
+      constructor(){
+        super();
+      }
+
       // get prop data from parent component
-      @Prop()
-      custom: string
+      @Prop() custom: string;
+      @Prop() customs: custom[];
+
+      // check update of customs' value & update it
+      @Watch('customs')
+      update(val: custom[], oldVal: custom[]) {
+        this.customs = val;
+      }
+
+      created(){
+
+      }
 
       // @Emit('updateCustom')
       updateCustom(v){
