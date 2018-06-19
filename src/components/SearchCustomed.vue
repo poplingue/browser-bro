@@ -2,7 +2,7 @@
 <template>
     <div>
       <input
-        @change="search"
+        @keyup="updateSearch"
         type="text"
         placeholder="Search">
     </div>
@@ -15,8 +15,10 @@
     @Component
     export default class SearchCustomed extends Vue{
 
-      search(){
+      @Prop() search: string;
 
+      updateSearch(e){
+        this.$emit('updateSearch', e.target.value)
       }
 
     }
