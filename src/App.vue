@@ -8,7 +8,7 @@
       :custom="custom">
     </SelectCustom>
     <SearchCustomed></SearchCustomed>
-    <div>Custom value = {{custom || "None" }}</div>
+    <!--<div>Custom value = {{custom || "None" }}</div>-->
   </div>
 </template>
 
@@ -17,7 +17,7 @@
   import SelectCustom                    from "./components/SelectCustom";
   import SearchCustomed                  from "./components/SearchCustomed";
   import Customs                         from "./Services/Customs";
-  import {custom}                        from "./components/Custom";
+  import {custom}                        from "./elements/Custom";
 
   @Component({
     components: {

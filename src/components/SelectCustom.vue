@@ -2,15 +2,19 @@
 <template>
     <div>
         <select @change="updateCustom" name="custom" id="">
-          <option v-for="custom in customs" :value="custom.value">{{ custom.title }} </option>
+          <option selected disabled value="">pick a value</option>
+          <option
+            v-for="custom in customs"
+            :value="custom.value">
+            {{ custom.title }}
+          </option>
         </select>
-      <div>{{custom}}</div>
     </div>
 </template>
 
 <script lang="ts">
     import {Vue, Component, Prop, Emit, Watch} from "vue-property-decorator";
-    import {custom}                     from "./Custom";
+    import {custom}                            from "../elements/Custom";
 
     @Component
     export default class SelectCustom extends Vue{

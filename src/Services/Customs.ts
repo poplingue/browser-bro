@@ -1,13 +1,9 @@
-import Custom   from './../components/Custom';
-import {custom} from '../components/Custom';
+import Custom   from '../elements/Custom';
+import {custom} from '../elements/Custom';
 
 export default class Customs {
 
   public list: string[];
-
-  constructor() {
-
-  }
 
   private getRequest(url: string): Promise<any> {
 

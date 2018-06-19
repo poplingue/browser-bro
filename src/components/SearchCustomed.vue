@@ -1,7 +1,10 @@
 <!-- src/components/SearchCustomed.vue -->
 <template>
     <div>
-      <input type="text" placeholder="Search">
+      <input
+        @change="search"
+        type="text"
+        placeholder="Search">
     </div>
 </template>
 
@@ -12,9 +15,7 @@
     @Component
     export default class SearchCustomed extends Vue{
 
-      constructor(){
-        super();
-
+      search(){
 
       }
 
