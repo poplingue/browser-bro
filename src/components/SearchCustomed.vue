@@ -11,13 +11,14 @@
 <script lang="ts">
 
     import { Vue, Component, Prop } from "vue-property-decorator";
+    import {EventValue} from "../elements/EventValue";
 
     @Component
     export default class SearchCustomed extends Vue{
 
       @Prop() search: string;
 
-      updateSearch(e){
+      updateSearch(e: EventValue){
         this.$emit('updateSearch', e.target.value)
       }
 

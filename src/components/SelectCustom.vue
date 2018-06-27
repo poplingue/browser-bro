@@ -15,6 +15,8 @@
 <script lang="ts">
     import {Vue, Component, Prop, Emit, Watch} from "vue-property-decorator";
     import {custom}                            from "../elements/Custom";
+    import {EventValue} from "../elements/EventValue";
+
 
     @Component
     export default class SelectCustom extends Vue{
@@ -38,7 +40,7 @@
       }
 
       // @Emit('updateCustom')
-      updateCustom(v){
+      updateCustom(v: EventValue){
         // emit event from parent component
         this.$emit('updateCustom', v.target.value)
       }

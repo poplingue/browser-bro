@@ -16,7 +16,7 @@
 </template>
 
 <script lang="ts">
-  import {Vue, Component, Provide, Emit} from "vue-property-decorator";
+  import {Vue, Component, Provide, Emit, Watch} from "vue-property-decorator";
   import SelectCustom                    from "./components/SelectCustom";
   import SearchCustomed                  from "./components/SearchCustomed";
   import Customs                         from "./Services/Customs";
@@ -50,10 +50,14 @@
       this.custom = value;
     }
 
-
     @Emit()
     updateSearch(value: string) {
       this.search = value;
+    }
+
+    @Watch('search')
+    goLycos(val: string, oldVal: string) {
+      console.log('GO LYCOS');
     }
   }
 </script>
