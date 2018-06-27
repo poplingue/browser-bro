@@ -47,6 +47,11 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 * [Repo ajax-with-promise.ts](https://gist.github.com/f84dbf3cf5c0ece164cfdb4246eab5d4.git)
 
+
+### Style
+
+[https://buefy.github.io/](https://buefy.github.io/)
+
 ### Todos
 
 * learning search based on URLs clicked
