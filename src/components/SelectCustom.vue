@@ -1,15 +1,31 @@
 <!-- src/components/SelectCustom.vue -->
 <template>
-    <div>
-        <select @change="updateCustom" name="custom" id="">
-          <option selected disabled value="">pick a value</option>
-          <option
-            v-for="custom in customs"
-            :value="custom.value">
-            {{ custom.title }}
-          </option>
-        </select>
-    </div>
+
+        <!--<select @change="updateCustom" name="custom" id="">-->
+          <!--<option selected disabled value="">pick a value</option>-->
+          <!--<option-->
+            <!--v-for="custom in customs"-->
+            <!--:value="custom.value">-->
+            <!--{{ custom.title }}-->
+          <!--</option>-->
+        <!--</select>-->
+
+        <b-field
+          @change="updateCustom"
+          name="custom"
+          label="Pick a value"
+          id="">
+          <div class="select">
+            <b-select
+              placeholder="pick a value">
+              <option
+                v-for="custom in customs"
+                :value="custom.value">
+                {{ custom.title }}
+              </option>
+            </b-select>
+          </div>
+        </b-field>
 </template>
 
 <script lang="ts">

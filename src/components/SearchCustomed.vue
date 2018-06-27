@@ -1,10 +1,16 @@
 <!-- src/components/SearchCustomed.vue -->
 <template>
     <div>
-      <input
-        @keyup="updateSearch"
-        type="text"
-        placeholder="Search">
+      <b-field label="Launch the research">
+        <b-input @keyup="updateSearch"
+                 type="text"
+                 placeholder="Search">
+        </b-input>
+      </b-field>
+      <!--<input-->
+        <!--@keyup="updateSearch"-->
+        <!--type="text"-->
+        <!--placeholder="Search">-->
     </div>
 </template>
 
